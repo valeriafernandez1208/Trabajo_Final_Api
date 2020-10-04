@@ -7,15 +7,11 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @autor : eynar.pari
- * @date : 26/09/2020.
- **/
 public class ReportGenerator {
 
 
     public static void main(String[]args){
-        String path="C:\\Users\\Eynar\\Desktop\\UCBRepositorios\\ucb_rest\\build\\reports\\cucumber\\";
+        String path="D:\\DocIntelliJ\\restapi_java\\build\\reports\\cucumber\\";
 
         File reportOutPut= new File(path+"finalReportAPI");
 
@@ -25,7 +21,7 @@ public class ReportGenerator {
         Configuration configuration =  new Configuration(reportOutPut,"UCB Diplomado");
         configuration.setBuildNumber("v50.0");
         configuration.addClassifications("SO","Windows");
-        configuration.addClassifications("Owner","Eynar");
+        configuration.addClassifications("Owner","Valeria");
         configuration.addClassifications("Branch","cucumber");
         configuration.addClassifications("Type Report","Local");
 
