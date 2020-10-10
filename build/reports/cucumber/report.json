@@ -1,0 +1,566 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "As a user I want to create a project so that organize my task",
+        "description": "",
+        "id": "project;as-a-user-i-want-to-create-a-project-so-that-organize-my-task",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 74226800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I have authentication to todo.ly",
+            "match": {
+              "location": "MyStepdefs.iHaveAuthenticationToTodoLy()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1573837500,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 6,
+                "value": "# consumiendo el request"
+              }
+            ],
+            "line": 7,
+            "name": "I send POST request \u0027api/items.json\u0027 with json",
+            "match": {
+              "arguments": [
+                {
+                  "val": "POST",
+                  "offset": 7
+                },
+                {
+                  "val": "api/items.json",
+                  "offset": 21
+                }
+              ],
+              "location": "MyStepdefs.iSendPOSTRequestApiProjectsJsonWithJson(String,String,String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 8,
+              "value": "{\r\n\"Content\": \"valeria\"\r\n}"
+            }
+          },
+          {
+            "result": {
+              "duration": 1710400,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 13,
+                "value": "# verificar el response"
+              }
+            ],
+            "line": 14,
+            "name": "I expected the response code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "MyStepdefs.iExpectedTheResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3230600,
+              "error_message": "org.json.JSONException: JSONObject[\"LastUpdatedDate\"] not found.\r\n\tat org.json.JSONObject.get(JSONObject.java:498)\r\n\tat helpers.JsonHelper.areEqualJSON(JsonHelper.java:40)\r\n\tat runner.MyStepdefs.iExpectedTheResponseBodyIsEqual(MyStepdefs.java:52)\r\n\tat ✽.And I expected the response body is equal(createProject.feature:15)\r\n",
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "I expected the response body is equal",
+            "match": {
+              "location": "MyStepdefs.iExpectedTheResponseBodyIsEqual(String)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "content_type": "",
+              "line": 16,
+              "value": "{\r\n\"Id\": \"EXCLUDE\",\r\n\"Content\": \"valeria\",\r\n\"ItemType\": 1,\r\n\"Checked\": false,\r\n\"ProjectId\": null,\r\n\"ParentId\": null,\r\n\"Path\": \"\",\r\n\"Collapsed\": false,\r\n\"DateString\": null,\r\n\"DateStringPriority\": 0,\r\n\"DueDate\": \"\",\r\n\"Recurrence\": null,\r\n\"ItemOrder\": null,\r\n\"Priority\": 4,\r\n\"LastSyncedDateTime\": \"EXCLUDE\",\r\n\"Children\": [],\r\n\"DueDateTime\": null,\r\n\"CreatedDate\": \"EXCLUDE\",\r\n\"LastCheckedDate\": null,\r\n\"LastUpdatedDate\": \"EXCLUDE\",\r\n\"Deleted\": false,\r\n\"Notes\": \"\",\r\n\"InHistory\": false,\r\n\"SyncClientCreationId\": null,\r\n\"DueTimeSpecified\": true,\r\n\"OwnerId\": \"EXCLUDE\"\r\n}"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 47,
+            "name": "I get the property value \u0027Id\u0027 and save on ID_ITEM",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Id",
+                  "offset": 26
+                },
+                {
+                  "val": "ID_ITEM",
+                  "offset": 42
+                }
+              ],
+              "location": "MyStepdefs.iGetThePropertyValueIdAndSaveOnID_PROJECT(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 48,
+            "name": "I get the property value \u0027Content\u0027 and save on NAME_ITEM",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content",
+                  "offset": 26
+                },
+                {
+                  "val": "NAME_ITEM",
+                  "offset": 47
+                }
+              ],
+              "location": "MyStepdefs.iGetThePropertyValueIdAndSaveOnID_PROJECT(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 50,
+            "name": "I send PUT request \u0027api/items/ID_ITEM.json\u0027 with json",
+            "match": {
+              "arguments": [
+                {
+                  "val": "PUT",
+                  "offset": 7
+                },
+                {
+                  "val": "api/items/ID_ITEM.json",
+                  "offset": 20
+                }
+              ],
+              "location": "MyStepdefs.iSendPOSTRequestApiProjectsJsonWithJson(String,String,String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 51,
+              "value": "{\r\n   \"Content\":\"NAME_ITEM UPDATE\",\r\n   \"Checked\": \"true\"\r\n}"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "comments": [
+              {
+                "line": 58,
+                "value": "# verificar el response"
+              }
+            ],
+            "line": 60,
+            "name": "I expected the response code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "MyStepdefs.iExpectedTheResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 61,
+            "name": "I expected the response body is equal",
+            "match": {
+              "location": "MyStepdefs.iExpectedTheResponseBodyIsEqual(String)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "content_type": "",
+              "line": 62,
+              "value": "{\r\n\"Id\": \"ID_ITEM\",\r\n\"Content\": \"NAME_ITEM UPDATE\",\r\n\"ItemType\": 1,\r\n\"Checked\": true,\r\n\"ProjectId\": null,\r\n\"ParentId\": null,\r\n\"Path\": \"\",\r\n\"Collapsed\": false,\r\n\"DateString\": null,\r\n\"DateStringPriority\": 0,\r\n\"DueDate\": \"\",\r\n\"Recurrence\": null,\r\n\"ItemOrder\": null,\r\n\"Priority\": 4,\r\n\"LastSyncedDateTime\": \"EXCLUDE\",\r\n\"Children\": [],\r\n\"DueDateTime\": null,\r\n\"CreatedDate\": \"EXCLUDE\",\r\n\"LastCheckedDate\": \"EXCLUDE\",\r\n\"LastUpdatedDate\": \"EXCLUDE\",\r\n\"Deleted\": false,\r\n\"Notes\": \"\",\r\n\"InHistory\": true,\r\n\"SyncClientCreationId\": null,\r\n\"DueTimeSpecified\": true,\r\n\"OwnerId\": \"EXCLUDE\"\r\n}"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 92,
+            "name": "I send GET request \u0027api/items/ID_ITEM.json\u0027 with json",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GET",
+                  "offset": 7
+                },
+                {
+                  "val": "api/items/ID_ITEM.json",
+                  "offset": 20
+                }
+              ],
+              "location": "MyStepdefs.iSendPOSTRequestApiProjectsJsonWithJson(String,String,String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 93,
+              "value": ""
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 95,
+            "name": "I expected the response code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "MyStepdefs.iExpectedTheResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 96,
+            "name": "I expected the response body is equal",
+            "match": {
+              "location": "MyStepdefs.iExpectedTheResponseBodyIsEqual(String)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "content_type": "",
+              "line": 97,
+              "value": "{\r\n\"Id\": \"ID_ITEM\",\r\n\"Content\": \"NAME_ITEM UPDATE\",\r\n\"ItemType\": 1,\r\n\"Checked\": true,\r\n\"ProjectId\": null,\r\n\"ParentId\": null,\r\n\"Path\": \"\",\r\n\"Collapsed\": false,\r\n\"DateString\": null,\r\n\"DateStringPriority\": 0,\r\n\"DueDate\": \"\",\r\n\"Recurrence\": null,\r\n\"ItemOrder\": null,\r\n\"Priority\": 4,\r\n\"LastSyncedDateTime\": \"EXCLUDE\",\r\n\"Children\": [],\r\n\"DueDateTime\": null,\r\n\"CreatedDate\": \"EXCLUDE\",\r\n\"LastCheckedDate\": \"EXCLUDE\",\r\n\"LastUpdatedDate\": \"EXCLUDE\",\r\n\"Deleted\": false,\r\n\"Notes\": \"\",\r\n\"InHistory\": true,\r\n\"SyncClientCreationId\": null,\r\n\"DueTimeSpecified\": true,\r\n\"OwnerId\": \"EXCLUDE\"\r\n}"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 127,
+            "name": "I send DELETE request \u0027api/items/ID_ITEM.json\u0027 with json",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DELETE",
+                  "offset": 7
+                },
+                {
+                  "val": "api/items/ID_ITEM.json",
+                  "offset": 23
+                }
+              ],
+              "location": "MyStepdefs.iSendPOSTRequestApiProjectsJsonWithJson(String,String,String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 128,
+              "value": ""
+            }
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 130,
+            "name": "I expected the response code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "MyStepdefs.iExpectedTheResponseCode(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 2,
+            "name": "@Valeria"
+          }
+        ]
+      }
+    ],
+    "name": "Project",
+    "description": "",
+    "id": "project",
+    "keyword": "Feature",
+    "uri": "createProject.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "As a user I want to create a user account.",
+        "description": "",
+        "id": "user;as-a-user-i-want-to-create-a-user-account.",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 541446600,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 5,
+                "value": "# consumiendo el request"
+              }
+            ],
+            "line": 6,
+            "name": "I send POST request \u0027api/user.json\u0027 with json",
+            "match": {
+              "arguments": [
+                {
+                  "val": "POST",
+                  "offset": 7
+                },
+                {
+                  "val": "api/user.json",
+                  "offset": 21
+                }
+              ],
+              "location": "MyStepdefs.iSendPOSTRequestApiProjectsJsonWithJson(String,String,String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "{\r\n\"Email\": \"valeria1208@outlook.com\",\r\n\"FullName\": \"valeria fernandez \",\r\n\"Password\": \"user7890\"\r\n}"
+            }
+          },
+          {
+            "result": {
+              "duration": 161100,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 14,
+                "value": "# verificar el response"
+              }
+            ],
+            "line": 15,
+            "name": "I expected the response code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "MyStepdefs.iExpectedTheResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 710800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I expected the response body is equal",
+            "match": {
+              "location": "MyStepdefs.iExpectedTheResponseBodyIsEqual(String)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "content_type": "",
+              "line": 17,
+              "value": "{\r\n\"Id\": \"EXCLUDE\",\r\n\"Email\": \"valeria1208@outlook.com\",\r\n\"Password\":  \"EXCLUDE\",\r\n\"FullName\": \"valeria fernandez \",\r\n\"TimeZone\": 0,\r\n\"IsProUser\": false,\r\n\"DefaultProjectId\":  \"EXCLUDE\",\r\n\"AddItemMoreExpanded\": false,\r\n\"EditDueDateMoreExpanded\": false,\r\n\"ListSortType\": 0,\r\n\"FirstDayOfWeek\": 0,\r\n\"NewTaskDueDate\": -1,\r\n\"TimeZoneId\":  \"EXCLUDE\"\r\n}"
+            }
+          },
+          {
+            "result": {
+              "duration": 15400,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I have authentication to todo.ly",
+            "match": {
+              "location": "MyStepdefs.iHaveAuthenticationToTodoLy()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 430464700,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "I send PUT request \u0027api/user/0.json\u0027 with json",
+            "match": {
+              "arguments": [
+                {
+                  "val": "PUT",
+                  "offset": 7
+                },
+                {
+                  "val": "api/user/0.json",
+                  "offset": 20
+                }
+              ],
+              "location": "MyStepdefs.iSendPOSTRequestApiProjectsJsonWithJson(String,String,String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 38,
+              "value": "{\r\n\"FullName\": \"valeria alejandra fernandez sanchez \"\r\n}"
+            }
+          },
+          {
+            "result": {
+              "duration": 275900,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 44,
+                "value": "# verificar el response"
+              }
+            ],
+            "line": 46,
+            "name": "I expected the response code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "MyStepdefs.iExpectedTheResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 978500,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I expected the response body is equal",
+            "match": {
+              "location": "MyStepdefs.iExpectedTheResponseBodyIsEqual(String)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "content_type": "",
+              "line": 48,
+              "value": "{\r\n\"Id\": \"EXCLUDE\",\r\n\"Email\": \"valeria1208@outlook.com\",\r\n\"Password\": \"EXCLUDE\",\r\n\"FullName\": \"valeria alejandra fernandez sanchez \",\r\n\"TimeZone\": 0,\r\n\"IsProUser\": false,\r\n\"DefaultProjectId\": \"EXCLUDE\",\r\n\"AddItemMoreExpanded\": false,\r\n\"EditDueDateMoreExpanded\": false,\r\n\"ListSortType\": 0,\r\n\"FirstDayOfWeek\": 0,\r\n\"NewTaskDueDate\": -1,\r\n\"TimeZoneId\": \"EXCLUDE\"\r\n}"
+            }
+          },
+          {
+            "result": {
+              "duration": 416546000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "I send GET request \u0027api/user.json\u0027 with json",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GET",
+                  "offset": 7
+                },
+                {
+                  "val": "api/user.json",
+                  "offset": 20
+                }
+              ],
+              "location": "MyStepdefs.iSendPOSTRequestApiProjectsJsonWithJson(String,String,String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 66,
+              "value": ""
+            }
+          },
+          {
+            "result": {
+              "duration": 288000,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "I expected the response code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "MyStepdefs.iExpectedTheResponseCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 848800,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "I expected the response body is equal",
+            "match": {
+              "location": "MyStepdefs.iExpectedTheResponseBodyIsEqual(String)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "content_type": "",
+              "line": 70,
+              "value": "{\r\n\"Id\":\"EXCLUDE\",\r\n\"Email\": \"valeria1208@outlook.com\",\r\n\"Password\": \"EXCLUDE\",\r\n\"FullName\": \"valeria alejandra fernandez sanchez \",\r\n\"TimeZone\": 0,\r\n\"IsProUser\": false,\r\n\"DefaultProjectId\":\"EXCLUDE\",\r\n\"AddItemMoreExpanded\": false,\r\n\"EditDueDateMoreExpanded\": false,\r\n\"ListSortType\": 0,\r\n\"FirstDayOfWeek\": 0,\r\n\"NewTaskDueDate\": -1,\r\n\"TimeZoneId\": \"EXCLUDE\"\r\n}"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "line": 2,
+            "name": "@Valeria"
+          }
+        ]
+      }
+    ],
+    "name": "User",
+    "description": "",
+    "id": "user",
+    "keyword": "Feature",
+    "uri": "createUser.feature"
+  }
+]
